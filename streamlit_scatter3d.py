@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import plotly.figure_factory as ff
+import plotly.express as px
 
 st.title('scatter 3D for car coating')
 
@@ -9,5 +9,5 @@ if upfile is not None:
   df = pd.read_csv(upfile)
   st.write(df)
 
-fig = ff.create_scatterplotmatrix(df, index=['A-2deg-L', 'A-2deg-a', 'A-2deg-b'])
-st.plotly_chart(fig, use_container_width=True)
+fig = px.scatter_3d(df, x='A-2deg-L', y='A-2deg-a', z='A-2deg-b', color='part')
+fig.show()
