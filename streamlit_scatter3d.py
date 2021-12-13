@@ -8,7 +8,7 @@ labelhead = 'A-2deg'
 
 
 def plot_plotly(df):
-  labelhead = st.sidebar.selectbox('select', ('A-2deg', 'A-10deg'))
+  labelhead = st.sidebar.selectbox('select', ('A-2deg', 'A-10deg', 'D50-2deg', 'D50-10deg', 'D65-2deg', 'D65-10deg', 'F2-2dge', 'F2-10deg'))
   xl = labelhead + '-L'
   yl = labelhead + '-a'
   zl = labelhead + '-b'
