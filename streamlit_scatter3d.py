@@ -16,9 +16,9 @@ def plot_plotly(df):
   parts = []
   if st.sidebar.checkbox('hood', value=True):
     parts = parts + ['hood']
-  if st.sidebar.checkbo('roof', value=True):
+  if st.sidebar.checkbox('roof', value=True):
     parts = parts + ['roof']
-  if st.sidebar.checkbo('trunk', value=True):
+  if st.sidebar.checkbox('trunk', value=True):
     parts = parts + ['trunk']
 
   if st.sidebar.checkbox('左前F', value=True):
