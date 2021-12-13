@@ -31,7 +31,7 @@ def plot_plotly(df):
   if st.sidebar.checkbox('左後F', value=True):
     parts = parts + ['左後F'] 
 
-    if st.sidebar.checkbox('右前F', value=True):
+  if st.sidebar.checkbox('右前F', value=True):
     parts = parts + ['右前F']    
   if st.sidebar.checkbox('右前D', value=True):
     parts = parts + ['右前D']
