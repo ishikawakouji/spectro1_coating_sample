@@ -11,6 +11,7 @@ yl = labelhead + '-a'
 zl = labelhead + '-b'
 
 def plot_plotly(df):
+  st.write(labelhead)
   fig = px.scatter_3d(df, x=xl, y=yl, z=zl, color='part')
   st.plotly_chart(fig, use_container_width=True)
 
