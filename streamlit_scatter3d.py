@@ -4,6 +4,8 @@ import plotly.express as px
 
 st.title('scatter 3D for car coating')
 
+st.sidebar.write('control')
+
 upfile = st.file_uploader('select file')
 if upfile is not None:
   df = pd.read_csv(upfile)
