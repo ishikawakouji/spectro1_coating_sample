@@ -20,7 +20,7 @@ upfile = st.sidebar.file_uploader('select file')
 
 if upfile is not None:
   df = pd.read_csv(upfile)
-  plot_plotly(df)
+  plot_plotly(df, labelhead)
   
 labelhead = st.sidebar.selectbox('select', ('A-2deg', 'A-10deg'))
 plot_plotly(df, labelhead)
