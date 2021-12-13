@@ -4,12 +4,19 @@ import plotly.express as px
 
 st.title('scatter 3D for car coating')
 
+labelhead = 'A-2deg'
+xl = labelhead + '-L'
+yl = labelhead + '-a'
+zl = labelhead + '-b'
+
+def plot_plotly(df):
+  fig = px.scatter_3d(df, x=xl, y=yl, z=zl, color='part')
+  st.plotly_chart(fig, use_container_width=True)
+
 st.sidebar.write('control')
 
-upfile = st.file_uploader('select file')
+upfile = st.sidebar.file_uploader('select file')
+
 if upfile is not None:
   df = pd.read_csv(upfile)
-  print('setting')
-  fig = px.scatter_3d(df, x='A-2deg-L', y='A-2deg-a', z='A-2deg-b', color='part')
-  print('show')
-  st.plotly_chart(fig, use_container_width=True)
+  plot_plotly(df)
