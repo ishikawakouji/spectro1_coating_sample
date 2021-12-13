@@ -6,11 +6,11 @@ st.title('scatter 3D for car coating')
 
 labelhead = 'A-2deg'
 
-xl = labelhead + '-L'
-yl = labelhead + '-a'
-zl = labelhead + '-b'
 
-def plot_plotly(df):
+def plot_plotly(df, labelhead):
+  xl = labelhead + '-L'
+  yl = labelhead + '-a'
+  zl = labelhead + '-b'
   st.write(labelhead)
   fig = px.scatter_3d(df, x=xl, y=yl, z=zl, color='part')
   st.plotly_chart(fig, use_container_width=True)
@@ -23,7 +23,4 @@ if upfile is not None:
   plot_plotly(df)
   
 labelhead = st.sidebar.selectbox('select', ('A-2deg', 'A-10deg'))
-xl = labelhead + '-L'
-yl = labelhead + '-a'
-zl = labelhead + '-b'
-plot_plotly(df)
+plot_plotly(df, labelhead)
