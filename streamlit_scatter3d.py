@@ -10,4 +10,4 @@ if upfile is not None:
   print('setting')
   fig = px.scatter_3d(df, x='A-2deg-L', y='A-2deg-a', z='A-2deg-b', color='part')
   print('show')
-  fig.show()
+  st.plotly_chart(fig, use_container_width=True)
