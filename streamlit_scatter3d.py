@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-st.title('scatter 3D for car coating')
+st.title('car coating / scatter 3D')
 
 labelhead = 'A-2deg'
 
@@ -46,7 +46,7 @@ def plot_plotly(df):
   fig = px.scatter_3d(ret, x=xl, y=yl, z=zl, color='part')
   st.plotly_chart(fig, use_container_width=True)
 
-upfile = st.sidebar.file_uploader('select file')
+upfile = st.sidebar.file_uploader('Spectro1 CSV file')
 
 if upfile is not None:
   df = pd.read_csv(upfile)
