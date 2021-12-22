@@ -14,12 +14,12 @@ def plot_plotly(df):
   zl = labelhead + '-b'
   
   parts = []
-  if st.sidebar.checkbox('hood', value=True):
-    parts = parts + ['hood']
-  if st.sidebar.checkbox('roof', value=True):
-    parts = parts + ['roof']
-  if st.sidebar.checkbox('trunk', value=True):
-    parts = parts + ['trunk']
+  if st.sidebar.checkbox('Hood', value=True):
+    parts = parts + ['Hood']
+  if st.sidebar.checkbox('Roof', value=True):
+    parts = parts + ['Roof']
+  if st.sidebar.checkbox('Trunk', value=True):
+    parts = parts + ['Trunk']
 
   if st.sidebar.checkbox('左前F', value=True):
     parts = parts + ['左前F']    
