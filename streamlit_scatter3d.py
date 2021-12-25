@@ -13,36 +13,37 @@ def plot_plotly(df):
   yl = labelhead + '-a'
   zl = labelhead + '-b'
   
-  parts = []
-  if st.sidebar.checkbox('Hood', value=True):
-    parts = parts + ['Hood']
-  if st.sidebar.checkbox('Roof', value=True):
-    parts = parts + ['Roof']
-  if st.sidebar.checkbox('Trunk', value=True):
-    parts = parts + ['Trunk']
+#  parts = []
+#  if st.sidebar.checkbox('Hood', value=True):
+#    parts = parts + ['Hood']
+#  if st.sidebar.checkbox('Roof', value=True):
+#    parts = parts + ['Roof']
+#  if st.sidebar.checkbox('Trunk', value=True):
+#    parts = parts + ['Trunk']
+#
+#  if st.sidebar.checkbox('左前F', value=True):
+#    parts = parts + ['左前F']    
+#  if st.sidebar.checkbox('左前D', value=True):
+#    parts = parts + ['左前D']
+#
+#  if st.sidebar.checkbox('左後D', value=True):
+#    parts = parts + ['左後D']
+#  if st.sidebar.checkbox('左後F', value=True):
+#    parts = parts + ['左後F'] 
+#
+#  if st.sidebar.checkbox('右前F', value=True):
+#    parts = parts + ['右前F']    
+#  if st.sidebar.checkbox('右前D', value=True):
+#    parts = parts + ['右前D']
+#
+#  if st.sidebar.checkbox('右後D', value=True):
+#    parts = parts + ['右後D']
+#  if st.sidebar.checkbox('右後F', value=True):
+#    parts = parts + ['右後F'] 
+#  
+#  ret = df[df['part'].isin(parts)]
 
-  if st.sidebar.checkbox('左前F', value=True):
-    parts = parts + ['左前F']    
-  if st.sidebar.checkbox('左前D', value=True):
-    parts = parts + ['左前D']
-
-  if st.sidebar.checkbox('左後D', value=True):
-    parts = parts + ['左後D']
-  if st.sidebar.checkbox('左後F', value=True):
-    parts = parts + ['左後F'] 
-
-  if st.sidebar.checkbox('右前F', value=True):
-    parts = parts + ['右前F']    
-  if st.sidebar.checkbox('右前D', value=True):
-    parts = parts + ['右前D']
-
-  if st.sidebar.checkbox('右後D', value=True):
-    parts = parts + ['右後D']
-  if st.sidebar.checkbox('右後F', value=True):
-    parts = parts + ['右後F'] 
-  
-  ret = df[df['part'].isin(parts)]
-    
+  # you can select at guide
   fig = px.scatter_3d(ret, x=xl, y=yl, z=zl, color='part')
   st.plotly_chart(fig, use_container_width=True)
 
