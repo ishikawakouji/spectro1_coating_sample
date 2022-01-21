@@ -43,8 +43,11 @@ def plot_plotly(df):
 #  
 #  ret = df[df['part'].isin(parts)]
 
+  # remove duplicated column
+  df2 = df.loc[:,~df.columns.duplicated()]
+  
   # you can select at guide
-  fig = px.scatter_3d(df, x=xl, y=yl, z=zl, color='part')
+  fig = px.scatter_3d(df2, x=xl, y=yl, z=zl, color='part')
   st.plotly_chart(fig, use_container_width=True)
 
 upfile = st.sidebar.file_uploader('Spectro1 CSV file')
